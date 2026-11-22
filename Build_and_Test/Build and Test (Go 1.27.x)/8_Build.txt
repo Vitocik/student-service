@@ -1,0 +1,7 @@
+﻿2026-11-22T08:05:26.8545168Z ##[group]Run go build -v ./...
+2026-11-22T08:05:26.8545554Z [36;1mgo build -v ./...[0m
+2026-11-22T08:05:26.8578363Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:26.8578589Z env:
+2026-11-22T08:05:26.8578767Z   GOTOOLCHAIN: local
+2026-11-22T08:05:26.8578960Z ##[endgroup]
+2026-11-22T08:05:27.0446392Z example.com/student-service

@@ -1,0 +1,42 @@
+﻿2026-11-22T08:05:19.3776861Z ##[group]Run golangci/golangci-lint-action@v9.3.0
+2026-11-22T08:05:19.3777132Z with:
+2026-11-22T08:05:19.3777302Z   version: v2.15.0
+2026-11-22T08:05:19.3777501Z   args: --timeout=5m
+2026-11-22T08:05:19.3777687Z   install-mode: binary
+2026-11-22T08:05:19.3777879Z   install-only: false
+2026-11-22T08:05:19.3779713Z   github-token: ***
+2026-11-22T08:05:19.3779895Z   verify: true
+2026-11-22T08:05:19.3780073Z   only-new-issues: false
+2026-11-22T08:05:19.3780263Z   skip-cache: false
+2026-11-22T08:05:19.3780592Z   skip-save-cache: false
+2026-11-22T08:05:19.3780794Z   cache-invalidation-interval: 7
+2026-11-22T08:05:19.3781022Z   problem-matchers: false
+2026-11-22T08:05:19.3781412Z env:
+2026-11-22T08:05:19.3781572Z   GOTOOLCHAIN: local
+2026-11-22T08:05:19.3781751Z ##[endgroup]
+2026-11-22T08:05:19.4922808Z ##[group]Restore cache
+2026-11-22T08:05:19.4925914Z Checking for go.mod: go.mod
+2026-11-22T08:05:19.5629271Z Cache hit for: golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630
+2026-11-22T08:05:19.6486544Z Received 663073 of 663073 (100.0%), 12.6 MBs/sec
+2026-11-22T08:05:19.6487016Z Cache Size: ~1 MB (663073 B)
+2026-11-22T08:05:19.6510295Z [command]/usr/bin/tar -xf /home/runner/work/_temp/c038826f-43d5-41aa-8ee6-28f636119f85/cache.tzst -P -C /home/runner/work/student-service/student-service --use-compress-program unzstd
+2026-11-22T08:05:19.7705208Z Cache restored successfully
+2026-11-22T08:05:19.7710284Z Restored cache for golangci-lint from key 'golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630' in 278ms
+2026-11-22T08:05:19.7711679Z ##[endgroup]
+2026-11-22T08:05:19.7712230Z ##[group]Install
+2026-11-22T08:05:19.7712981Z Finding needed golangci-lint version...
+2026-11-22T08:05:19.7716032Z Installation mode: binary
+2026-11-22T08:05:19.7716994Z Installing golangci-lint binary v2.15.0...
+2026-11-22T08:05:19.7718151Z Downloading binary https://github.com/golangci/golangci-lint/releases/download/v2.15.0/golangci-lint-2.15.0-linux-amd64.tar.gz ...
+2026-11-22T08:05:19.9238841Z [command]/usr/bin/tar xz --overwrite --warning=no-unknown-keyword --overwrite -C /home/runner -f /home/runner/work/_temp/cbde0ddf-5818-4d81-ac07-aa58392525b8
+2026-11-22T08:05:20.0711272Z Installed golangci-lint into /home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint in 299ms
+2026-11-22T08:05:20.0715349Z ##[endgroup]
+2026-11-22T08:05:20.0718307Z ##[group]run golangci-lint
+2026-11-22T08:05:20.0723261Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint config path] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:20.1407796Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint config verify] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:20.2185297Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint run  --timeout=5m] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:26.8257654Z 0 issues.
+2026-11-22T08:05:26.8257901Z 
+2026-11-22T08:05:26.8258064Z golangci-lint found no issues
+2026-11-22T08:05:26.8258463Z Ran golangci-lint in 6607ms
+2026-11-22T08:05:26.8259057Z ##[endgroup]

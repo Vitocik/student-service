@@ -1,0 +1,7 @@
+﻿2026-11-22T08:05:15.1008732Z ##[group]Run go mod verify
+2026-11-22T08:05:15.1008989Z [36;1mgo mod verify[0m
+2026-11-22T08:05:15.1040515Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:15.1040733Z env:
+2026-11-22T08:05:15.1040914Z   GOTOOLCHAIN: local
+2026-11-22T08:05:15.1041105Z ##[endgroup]
+2026-11-22T08:05:15.4219682Z all modules verified

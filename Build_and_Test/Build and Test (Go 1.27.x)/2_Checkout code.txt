@@ -1,0 +1,98 @@
+﻿2026-11-22T08:05:10.9197711Z ##[group]Run actions/checkout@v7
+2026-11-22T08:05:10.9198476Z with:
+2026-11-22T08:05:10.9198886Z   repository: Vitocik/student-service
+2026-11-22T08:05:10.9202331Z   token: ***
+2026-11-22T08:05:10.9202723Z   ssh-strict: true
+2026-11-22T08:05:10.9203123Z   ssh-user: git
+2026-11-22T08:05:10.9203518Z   persist-credentials: true
+2026-11-22T08:05:10.9203952Z   clean: true
+2026-11-22T08:05:10.9204353Z   sparse-checkout-cone-mode: true
+2026-11-22T08:05:10.9204816Z   fetch-depth: 1
+2026-11-22T08:05:10.9205194Z   fetch-tags: false
+2026-11-22T08:05:10.9205590Z   show-progress: true
+2026-11-22T08:05:10.9205988Z   lfs: false
+2026-11-22T08:05:10.9206368Z   submodules: false
+2026-11-22T08:05:10.9206765Z   set-safe-directory: true
+2026-11-22T08:05:10.9207208Z   allow-unsafe-pr-checkout: false
+2026-11-22T08:05:10.9207915Z ##[endgroup]
+2026-11-22T08:05:11.5659701Z Syncing repository: Vitocik/student-service
+2026-11-22T08:05:11.5661925Z ##[group]Getting Git version info
+2026-11-22T08:05:11.5663119Z Working directory is '/home/runner/work/student-service/student-service'
+2026-11-22T08:05:11.5664826Z [command]/usr/bin/git version
+2026-11-22T08:05:11.7437636Z git version 2.56.1
+2026-11-22T08:05:11.7454269Z ##[endgroup]
+2026-11-22T08:05:11.7464021Z Temporarily overriding HOME='/home/runner/work/_temp/05217f8d-e8c1-4153-91dc-c8f729701a87' before making global git config changes
+2026-11-22T08:05:11.7466456Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T08:05:11.7469561Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/student-service/student-service
+2026-11-22T08:05:11.7519711Z Deleting the contents of '/home/runner/work/student-service/student-service'
+2026-11-22T08:05:11.7523108Z ##[group]Determining repository object format
+2026-11-22T08:05:11.7526171Z ##[endgroup]
+2026-11-22T08:05:11.7528232Z ##[group]Initializing the repository
+2026-11-22T08:05:11.7532650Z [command]/usr/bin/git init /home/runner/work/student-service/student-service
+2026-11-22T08:05:11.7613110Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-22T08:05:11.7616102Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-22T08:05:11.7618940Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-22T08:05:11.7621294Z hint: call:
+2026-11-22T08:05:11.7622621Z hint:
+2026-11-22T08:05:11.7624147Z hint: 	git config --global init.defaultBranch <name>
+2026-11-22T08:05:11.7712834Z hint:
+2026-11-22T08:05:11.7716239Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-22T08:05:11.7719497Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-22T08:05:11.7722228Z hint:
+2026-11-22T08:05:11.7723600Z hint: 	git branch -m <name>
+2026-11-22T08:05:11.7725088Z hint:
+2026-11-22T08:05:11.7726929Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-22T08:05:11.7733109Z Initialized empty Git repository in /home/runner/work/student-service/student-service/.git/
+2026-11-22T08:05:11.7738507Z [command]/usr/bin/git remote add origin https://github.com/Vitocik/student-service
+2026-11-22T08:05:11.7743646Z ##[endgroup]
+2026-11-22T08:05:11.7745681Z ##[group]Disabling automatic garbage collection
+2026-11-22T08:05:11.7747681Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-22T08:05:11.7752136Z ##[endgroup]
+2026-11-22T08:05:11.7754377Z ##[group]Setting up auth
+2026-11-22T08:05:11.7755868Z Removing SSH command configuration
+2026-11-22T08:05:11.7757979Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T08:05:11.7770063Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T08:05:11.9403734Z Removing HTTP extra header
+2026-11-22T08:05:11.9408807Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T08:05:11.9439918Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T08:05:11.9676306Z Removing includeIf entries pointing to credentials config files
+2026-11-22T08:05:11.9680421Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T08:05:11.9710222Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T08:05:11.9950191Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-37169f39-2937-4182-97c0-3977c9fa1484.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-22T08:05:11.9984544Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/student-service/student-service/.git.path /home/runner/work/_temp/git-credentials-37169f39-2937-4182-97c0-3977c9fa1484.config
+2026-11-22T08:05:12.0014223Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/student-service/student-service/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-37169f39-2937-4182-97c0-3977c9fa1484.config
+2026-11-22T08:05:12.0045458Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-37169f39-2937-4182-97c0-3977c9fa1484.config
+2026-11-22T08:05:12.0074933Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-37169f39-2937-4182-97c0-3977c9fa1484.config
+2026-11-22T08:05:12.0100086Z ##[endgroup]
+2026-11-22T08:05:12.0101737Z ##[group]Fetching the repository
+2026-11-22T08:05:12.0106347Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f0b7da3831476921fe76502949088a81b156dc64:refs/remotes/pull/1/merge
+2026-11-22T08:05:12.4232176Z From https://github.com/Vitocik/student-service
+2026-11-22T08:05:12.4232914Z  * [new ref]         f0b7da3831476921fe76502949088a81b156dc64 -> pull/1/merge
+2026-11-22T08:05:12.4237024Z ##[endgroup]
+2026-11-22T08:05:12.4237551Z ##[group]Determining the checkout info
+2026-11-22T08:05:12.4238139Z ##[endgroup]
+2026-11-22T08:05:12.4243830Z [command]/usr/bin/git sparse-checkout disable
+2026-11-22T08:05:12.4291371Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-22T08:05:12.4316382Z ##[group]Checking out the ref
+2026-11-22T08:05:12.4319754Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-22T08:05:12.4380504Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-22T08:05:12.4380808Z 
+2026-11-22T08:05:12.4380983Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-22T08:05:12.4381601Z changes and commit them, and you can discard any commits you make in this
+2026-11-22T08:05:12.4382044Z state without impacting any branches by switching back to a branch.
+2026-11-22T08:05:12.4382405Z 
+2026-11-22T08:05:12.4382718Z If you want to create a new branch to retain commits you create, you may
+2026-11-22T08:05:12.4383280Z do so (now or later) by using -c with the switch command. Example:
+2026-11-22T08:05:12.4383602Z 
+2026-11-22T08:05:12.4383770Z   git switch -c <new-branch-name>
+2026-11-22T08:05:12.4383993Z 
+2026-11-22T08:05:12.4384114Z Or undo this operation with:
+2026-11-22T08:05:12.4384321Z 
+2026-11-22T08:05:12.4384428Z   git switch -
+2026-11-22T08:05:12.4384591Z 
+2026-11-22T08:05:12.4384772Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-22T08:05:12.4385010Z 
+2026-11-22T08:05:12.4385499Z HEAD is now at f0b7da3 Merge 66753a52ae5b1322fc0caefbdffb3f32389eefe4 into 6497ddc8bfbd00470d6bddfbf563a81e8270d41c
+2026-11-22T08:05:12.4392703Z ##[endgroup]
+2026-11-22T08:05:12.4430799Z [command]/usr/bin/git log -1 --format=%H
+2026-11-22T08:05:12.4454219Z f0b7da3831476921fe76502949088a81b156dc64

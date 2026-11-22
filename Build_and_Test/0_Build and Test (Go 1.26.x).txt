@@ -1,0 +1,456 @@
+﻿2026-11-22T08:05:09.9944670Z Current runner version: '2.338.2'
+2026-11-22T08:05:09.9983123Z ##[group]Runner Image Provisioner
+2026-11-22T08:05:09.9984483Z Hosted Compute Agent
+2026-11-22T08:05:09.9985615Z Version: 20261111.635
+2026-11-22T08:05:09.9986900Z Commit: b8a594ea514ff44cadb5342986c68b1eac6e22ed
+2026-11-22T08:05:09.9988178Z Build Date: 2026-11-11T01:49:01Z
+2026-11-22T08:05:09.9989345Z Worker ID: {36ea3cc8-a206-4e53-9f4b-0f84d5c7973f}
+2026-11-22T08:05:09.9990639Z Region: eastus
+2026-11-22T08:05:09.9991579Z Cloud: Azure
+2026-11-22T08:05:09.9992483Z ##[endgroup]
+2026-11-22T08:05:09.9995153Z ##[group]Operating System
+2026-11-22T08:05:09.9996235Z Ubuntu
+2026-11-22T08:05:09.9997618Z 26.04.1
+2026-11-22T08:05:09.9998635Z LTS
+2026-11-22T08:05:09.9999689Z ##[endgroup]
+2026-11-22T08:05:10.0000827Z ##[group]Runner Image
+2026-11-22T08:05:10.0001993Z Image: ubuntu-26.04
+2026-11-22T08:05:10.0003041Z Version: 20261116.202.1
+2026-11-22T08:05:10.0005404Z Included Software: https://github.com/actions/runner-images/blob/ubuntu26/20261116.202/images/ubuntu/Ubuntu2604-Readme.md
+2026-11-22T08:05:10.0008554Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu26%2F20261116.202
+2026-11-22T08:05:10.0010469Z ##[endgroup]
+2026-11-22T08:05:10.0012605Z ##[group]GITHUB_TOKEN Permissions
+2026-11-22T08:05:10.0015804Z Contents: read
+2026-11-22T08:05:10.0017141Z Metadata: read
+2026-11-22T08:05:10.0018218Z ##[endgroup]
+2026-11-22T08:05:10.0021425Z Secret source: Actions
+2026-11-22T08:05:10.0023047Z Cache mode: write
+2026-11-22T08:05:10.0024922Z Prepare workflow directory
+2026-11-22T08:05:10.0530255Z Prepare all required actions
+2026-11-22T08:05:10.0598974Z Getting action download info
+2026-11-22T08:05:10.2369965Z Download action repository 'actions/checkout@v7' (SHA:3d3c42e5aac5ba805825da76410c181273ba90b1)
+2026-11-22T08:05:10.3457601Z Download action repository 'actions/setup-go@v7' (SHA:d8cbb8045d7f43706b9177cceb36c1f91a6644d5)
+2026-11-22T08:05:10.4959619Z Download action repository 'golangci/golangci-lint-action@v9.3.0' (SHA:ba0d7d2ec06a0ea1cb5fa41b2e4a3ab91d21278a)
+2026-11-22T08:05:10.6323720Z Download action repository 'actions/upload-artifact@v7' (SHA:cf430e030ddbb5b0abf93d22962f4752f3646cd9)
+2026-11-22T08:05:10.7897597Z Complete job name: Build and Test (Go 1.26.x)
+2026-11-22T08:05:10.8821725Z ##[group]Run actions/checkout@v7
+2026-11-22T08:05:10.8822620Z with:
+2026-11-22T08:05:10.8823078Z   repository: Vitocik/student-service
+2026-11-22T08:05:10.8826914Z   token: ***
+2026-11-22T08:05:10.8827369Z   ssh-strict: true
+2026-11-22T08:05:10.8827823Z   ssh-user: git
+2026-11-22T08:05:10.8828283Z   persist-credentials: true
+2026-11-22T08:05:10.8828782Z   clean: true
+2026-11-22T08:05:10.8829240Z   sparse-checkout-cone-mode: true
+2026-11-22T08:05:10.8829763Z   fetch-depth: 1
+2026-11-22T08:05:10.8830200Z   fetch-tags: false
+2026-11-22T08:05:10.8830655Z   show-progress: true
+2026-11-22T08:05:10.8831108Z   lfs: false
+2026-11-22T08:05:10.8831531Z   submodules: false
+2026-11-22T08:05:10.8831987Z   set-safe-directory: true
+2026-11-22T08:05:10.8832505Z   allow-unsafe-pr-checkout: false
+2026-11-22T08:05:10.8833320Z ##[endgroup]
+2026-11-22T08:05:11.1817565Z Syncing repository: Vitocik/student-service
+2026-11-22T08:05:11.1820793Z ##[group]Getting Git version info
+2026-11-22T08:05:11.1822010Z Working directory is '/home/runner/work/student-service/student-service'
+2026-11-22T08:05:11.1823199Z [command]/usr/bin/git version
+2026-11-22T08:05:11.1835026Z git version 2.56.1
+2026-11-22T08:05:11.1953265Z ##[endgroup]
+2026-11-22T08:05:11.1967567Z Temporarily overriding HOME='/home/runner/work/_temp/ff53c773-407d-461a-9b3c-0bb3eea97069' before making global git config changes
+2026-11-22T08:05:11.1970064Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T08:05:11.1971896Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/student-service/student-service
+2026-11-22T08:05:11.1974796Z Deleting the contents of '/home/runner/work/student-service/student-service'
+2026-11-22T08:05:11.1976003Z ##[group]Determining repository object format
+2026-11-22T08:05:11.1977594Z ##[endgroup]
+2026-11-22T08:05:11.1978358Z ##[group]Initializing the repository
+2026-11-22T08:05:11.1979245Z [command]/usr/bin/git init /home/runner/work/student-service/student-service
+2026-11-22T08:05:11.2091883Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-22T08:05:11.2093397Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-22T08:05:11.2094445Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-22T08:05:11.2095299Z hint: call:
+2026-11-22T08:05:11.2096155Z hint:
+2026-11-22T08:05:11.2097071Z hint: 	git config --global init.defaultBranch <name>
+2026-11-22T08:05:11.2097801Z hint:
+2026-11-22T08:05:11.2098885Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-22T08:05:11.2099929Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-22T08:05:11.2101104Z hint:
+2026-11-22T08:05:11.2101918Z hint: 	git branch -m <name>
+2026-11-22T08:05:11.2102774Z hint:
+2026-11-22T08:05:11.2103853Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-22T08:05:11.2105882Z Initialized empty Git repository in /home/runner/work/student-service/student-service/.git/
+2026-11-22T08:05:11.2118338Z [command]/usr/bin/git remote add origin https://github.com/Vitocik/student-service
+2026-11-22T08:05:11.2176102Z ##[endgroup]
+2026-11-22T08:05:11.2177663Z ##[group]Disabling automatic garbage collection
+2026-11-22T08:05:11.2180345Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-22T08:05:11.2217837Z ##[endgroup]
+2026-11-22T08:05:11.2219169Z ##[group]Setting up auth
+2026-11-22T08:05:11.2220145Z Removing SSH command configuration
+2026-11-22T08:05:11.2225907Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T08:05:11.2263762Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T08:05:11.2740463Z Removing HTTP extra header
+2026-11-22T08:05:11.2746609Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T08:05:11.2781317Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T08:05:11.3055400Z Removing includeIf entries pointing to credentials config files
+2026-11-22T08:05:11.3057362Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T08:05:11.3098025Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T08:05:11.3374007Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-22T08:05:11.3413109Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/student-service/student-service/.git.path /home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:11.3445920Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/student-service/student-service/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:11.3481156Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:11.3513811Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:11.3543993Z ##[endgroup]
+2026-11-22T08:05:11.3544777Z ##[group]Fetching the repository
+2026-11-22T08:05:11.3551843Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +f0b7da3831476921fe76502949088a81b156dc64:refs/remotes/pull/1/merge
+2026-11-22T08:05:11.5451898Z From https://github.com/Vitocik/student-service
+2026-11-22T08:05:11.5452954Z  * [new ref]         f0b7da3831476921fe76502949088a81b156dc64 -> pull/1/merge
+2026-11-22T08:05:11.5457514Z ##[endgroup]
+2026-11-22T08:05:11.5458594Z ##[group]Determining the checkout info
+2026-11-22T08:05:11.5459501Z ##[endgroup]
+2026-11-22T08:05:11.5464076Z [command]/usr/bin/git sparse-checkout disable
+2026-11-22T08:05:11.5521171Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-22T08:05:11.5553427Z ##[group]Checking out the ref
+2026-11-22T08:05:11.5558822Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/1/merge
+2026-11-22T08:05:11.5643095Z Note: switching to 'refs/remotes/pull/1/merge'.
+2026-11-22T08:05:11.5643993Z 
+2026-11-22T08:05:11.5644659Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-22T08:05:11.5645755Z changes and commit them, and you can discard any commits you make in this
+2026-11-22T08:05:11.5647111Z state without impacting any branches by switching back to a branch.
+2026-11-22T08:05:11.5648087Z 
+2026-11-22T08:05:11.5648998Z If you want to create a new branch to retain commits you create, you may
+2026-11-22T08:05:11.5650518Z do so (now or later) by using -c with the switch command. Example:
+2026-11-22T08:05:11.5651547Z 
+2026-11-22T08:05:11.5651993Z   git switch -c <new-branch-name>
+2026-11-22T08:05:11.5652591Z 
+2026-11-22T08:05:11.5652976Z Or undo this operation with:
+2026-11-22T08:05:11.5653535Z 
+2026-11-22T08:05:11.5653865Z   git switch -
+2026-11-22T08:05:11.5654148Z 
+2026-11-22T08:05:11.5654651Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-22T08:05:11.5655240Z 
+2026-11-22T08:05:11.5656140Z HEAD is now at f0b7da3 Merge 66753a52ae5b1322fc0caefbdffb3f32389eefe4 into 6497ddc8bfbd00470d6bddfbf563a81e8270d41c
+2026-11-22T08:05:11.5659045Z ##[endgroup]
+2026-11-22T08:05:11.5710247Z [command]/usr/bin/git log -1 --format=%H
+2026-11-22T08:05:11.5737531Z f0b7da3831476921fe76502949088a81b156dc64
+2026-11-22T08:05:11.6048255Z ##[group]Run actions/setup-go@v7
+2026-11-22T08:05:11.6048837Z with:
+2026-11-22T08:05:11.6049248Z   go-version: 1.26.x
+2026-11-22T08:05:11.6049700Z   cache: true
+2026-11-22T08:05:11.6050147Z   cache-dependency-path: go.sum
+2026-11-22T08:05:11.6050657Z   check-latest: false
+2026-11-22T08:05:11.6054123Z   token: ***
+2026-11-22T08:05:11.6054552Z ##[endgroup]
+2026-11-22T08:05:11.7239791Z ##[group]Installed version
+2026-11-22T08:05:11.7241737Z Setup go version spec 1.26.x
+2026-11-22T08:05:11.7357478Z Found in cache @ /opt/hostedtoolcache/go/1.26.11/x64
+2026-11-22T08:05:11.7358862Z Added go to the path
+2026-11-22T08:05:11.7367467Z Successfully set up Go version 1.26.x
+2026-11-22T08:05:11.7369140Z ##[endgroup]
+2026-11-22T08:05:12.4708065Z [command]/opt/hostedtoolcache/go/1.26.11/x64/bin/go env GOMODCACHE
+2026-11-22T08:05:12.4745422Z [command]/opt/hostedtoolcache/go/1.26.11/x64/bin/go env GOCACHE
+2026-11-22T08:05:12.4776856Z /home/runner/go/pkg/mod
+2026-11-22T08:05:12.4804993Z /home/runner/.cache/go-build
+2026-11-22T08:05:12.5645755Z Cache hit for: setup-go-Linux-x64-ubuntu26-go-1.26.11-97c6e1934331f9e5f0d73ed1da964286129e545019dffe1a22fdbce95cf63484
+2026-11-22T08:05:13.1413467Z Received 116177302 of 116177302 (100.0%), 212.7 MBs/sec
+2026-11-22T08:05:13.1481348Z Cache Size: ~111 MB (116177302 B)
+2026-11-22T08:05:13.1482873Z [command]/usr/bin/tar -xf /home/runner/work/_temp/bfb3e670-c991-4cb1-9a20-f6945f3bd510/cache.tzst -P -C /home/runner/work/student-service/student-service --use-compress-program unzstd
+2026-11-22T08:05:14.0992969Z Cache restored successfully
+2026-11-22T08:05:14.1040812Z Cache restored from key: setup-go-Linux-x64-ubuntu26-go-1.26.11-97c6e1934331f9e5f0d73ed1da964286129e545019dffe1a22fdbce95cf63484
+2026-11-22T08:05:14.1068220Z go version go1.26.11 linux/amd64
+2026-11-22T08:05:14.1069289Z 
+2026-11-22T08:05:14.1070100Z ##[group]go env
+2026-11-22T08:05:14.1229321Z AR='ar'
+2026-11-22T08:05:14.1229788Z CC='gcc'
+2026-11-22T08:05:14.1230178Z CGO_CFLAGS='-O2 -g'
+2026-11-22T08:05:14.1230658Z CGO_CPPFLAGS=''
+2026-11-22T08:05:14.1231099Z CGO_CXXFLAGS='-O2 -g'
+2026-11-22T08:05:14.1231514Z CGO_ENABLED='1'
+2026-11-22T08:05:14.1231893Z CGO_FFLAGS='-O2 -g'
+2026-11-22T08:05:14.1232249Z CGO_LDFLAGS='-O2 -g'
+2026-11-22T08:05:14.1232611Z CXX='g++'
+2026-11-22T08:05:14.1232965Z GCCGO='gccgo'
+2026-11-22T08:05:14.1233332Z GO111MODULE=''
+2026-11-22T08:05:14.1233695Z GOAMD64='v1'
+2026-11-22T08:05:14.1234082Z GOARCH='amd64'
+2026-11-22T08:05:14.1234415Z GOAUTH='netrc'
+2026-11-22T08:05:14.1234732Z GOBIN=''
+2026-11-22T08:05:14.1235086Z GOCACHE='/home/runner/.cache/go-build'
+2026-11-22T08:05:14.1235544Z GOCACHEPROG=''
+2026-11-22T08:05:14.1235926Z GODEBUG=''
+2026-11-22T08:05:14.1236290Z GOENV='/home/runner/.config/go/env'
+2026-11-22T08:05:14.1236970Z GOEXE=''
+2026-11-22T08:05:14.1237301Z GOEXPERIMENT=''
+2026-11-22T08:05:14.1237711Z GOFIPS140='off'
+2026-11-22T08:05:14.1238049Z GOFLAGS=''
+2026-11-22T08:05:14.1239131Z GOGCCFLAGS='-fPIC -m64 -pthread -Wl,--no-gc-sections -fmessage-length=0 -ffile-prefix-map=/tmp/go-build926026389=/tmp/go-build -gno-record-gcc-switches'
+2026-11-22T08:05:14.1240259Z GOHOSTARCH='amd64'
+2026-11-22T08:05:14.1240617Z GOHOSTOS='linux'
+2026-11-22T08:05:14.1240954Z GOINSECURE=''
+2026-11-22T08:05:14.1241498Z GOMOD='/home/runner/work/student-service/student-service/go.mod'
+2026-11-22T08:05:14.1242127Z GOMODCACHE='/home/runner/go/pkg/mod'
+2026-11-22T08:05:14.1242585Z GONOPROXY=''
+2026-11-22T08:05:14.1243332Z GONOSUMDB=''
+2026-11-22T08:05:14.1243680Z GOOS='linux'
+2026-11-22T08:05:14.1244027Z GOPATH='/home/runner/go'
+2026-11-22T08:05:14.1244418Z GOPRIVATE=''
+2026-11-22T08:05:14.1244848Z GOPROXY='https://proxy.golang.org,direct'
+2026-11-22T08:05:14.1245406Z GOROOT='/opt/hostedtoolcache/go/1.26.11/x64'
+2026-11-22T08:05:14.1245901Z GOSUMDB='sum.golang.org'
+2026-11-22T08:05:14.1246283Z GOTELEMETRY='local'
+2026-11-22T08:05:14.1247043Z GOTELEMETRYDIR='/home/runner/.config/go/telemetry'
+2026-11-22T08:05:14.1247573Z GOTMPDIR=''
+2026-11-22T08:05:14.1247895Z GOTOOLCHAIN='local'
+2026-11-22T08:05:14.1248842Z GOTOOLDIR='/opt/hostedtoolcache/go/1.26.11/x64/pkg/tool/linux_amd64'
+2026-11-22T08:05:14.1249461Z GOVCS=''
+2026-11-22T08:05:14.1249795Z GOVERSION='go1.26.11'
+2026-11-22T08:05:14.1250155Z GOWORK=''
+2026-11-22T08:05:14.1250504Z PKG_CONFIG='pkg-config'
+2026-11-22T08:05:14.1250748Z 
+2026-11-22T08:05:14.1251286Z ##[endgroup]
+2026-11-22T08:05:14.1531288Z ##[group]Run go mod download
+2026-11-22T08:05:14.1531688Z [36;1mgo mod download[0m
+2026-11-22T08:05:14.1570782Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:14.1571079Z env:
+2026-11-22T08:05:14.1571286Z   GOTOOLCHAIN: local
+2026-11-22T08:05:14.1571516Z ##[endgroup]
+2026-11-22T08:05:14.2482100Z ##[group]Run go mod verify
+2026-11-22T08:05:14.2482637Z [36;1mgo mod verify[0m
+2026-11-22T08:05:14.2535340Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:14.2535831Z env:
+2026-11-22T08:05:14.2536182Z   GOTOOLCHAIN: local
+2026-11-22T08:05:14.2536581Z ##[endgroup]
+2026-11-22T08:05:14.6542639Z all modules verified
+2026-11-22T08:05:14.6600015Z ##[group]Run go vet ./...
+2026-11-22T08:05:14.6600349Z [36;1mgo vet ./...[0m
+2026-11-22T08:05:14.6633273Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:14.6633558Z env:
+2026-11-22T08:05:14.6633782Z   GOTOOLCHAIN: local
+2026-11-22T08:05:14.6634044Z ##[endgroup]
+2026-11-22T08:05:17.9933590Z ##[group]Run golangci/golangci-lint-action@v9.3.0
+2026-11-22T08:05:17.9933949Z with:
+2026-11-22T08:05:17.9934145Z   version: v2.15.0
+2026-11-22T08:05:17.9934367Z   args: --timeout=5m
+2026-11-22T08:05:17.9934593Z   install-mode: binary
+2026-11-22T08:05:17.9934812Z   install-only: false
+2026-11-22T08:05:17.9937272Z   github-token: ***
+2026-11-22T08:05:17.9937499Z   verify: true
+2026-11-22T08:05:17.9937709Z   only-new-issues: false
+2026-11-22T08:05:17.9937942Z   skip-cache: false
+2026-11-22T08:05:17.9938171Z   skip-save-cache: false
+2026-11-22T08:05:17.9938612Z   cache-invalidation-interval: 7
+2026-11-22T08:05:17.9938880Z   problem-matchers: false
+2026-11-22T08:05:17.9939111Z env:
+2026-11-22T08:05:17.9939306Z   GOTOOLCHAIN: local
+2026-11-22T08:05:17.9939524Z ##[endgroup]
+2026-11-22T08:05:18.1349651Z ##[group]Restore cache
+2026-11-22T08:05:18.1353956Z Checking for go.mod: go.mod
+2026-11-22T08:05:18.2095403Z Cache hit for: golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630
+2026-11-22T08:05:18.3816137Z Received 663073 of 663073 (100.0%), 6.7 MBs/sec
+2026-11-22T08:05:18.3817032Z Cache Size: ~1 MB (663073 B)
+2026-11-22T08:05:18.3849802Z [command]/usr/bin/tar -xf /home/runner/work/_temp/94b6853c-86e6-4bf4-94f8-c24ede5a027c/cache.tzst -P -C /home/runner/work/student-service/student-service --use-compress-program unzstd
+2026-11-22T08:05:18.5504472Z Cache restored successfully
+2026-11-22T08:05:18.5510334Z Restored cache for golangci-lint from key 'golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630' in 415ms
+2026-11-22T08:05:18.5512511Z ##[endgroup]
+2026-11-22T08:05:18.5513409Z ##[group]Install
+2026-11-22T08:05:18.5514059Z Finding needed golangci-lint version...
+2026-11-22T08:05:18.5518829Z Installation mode: binary
+2026-11-22T08:05:18.5519600Z Installing golangci-lint binary v2.15.0...
+2026-11-22T08:05:18.5521185Z Downloading binary https://github.com/golangci/golangci-lint/releases/download/v2.15.0/golangci-lint-2.15.0-linux-amd64.tar.gz ...
+2026-11-22T08:05:18.6953076Z [command]/usr/bin/tar xz --overwrite --warning=no-unknown-keyword --overwrite -C /home/runner -f /home/runner/work/_temp/9b4d41bc-570f-4ade-beb1-7d7be920e7e2
+2026-11-22T08:05:18.8722324Z Installed golangci-lint into /home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint in 321ms
+2026-11-22T08:05:18.8728140Z ##[endgroup]
+2026-11-22T08:05:18.8731631Z ##[group]run golangci-lint
+2026-11-22T08:05:18.8737309Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint config path] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:18.9614314Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint config verify] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:19.0607578Z Running [/home/runner/golangci-lint-2.15.0-linux-amd64/golangci-lint run  --timeout=5m] in [/home/runner/work/student-service/student-service] ...
+2026-11-22T08:05:22.1984565Z 0 issues.
+2026-11-22T08:05:22.1984847Z 
+2026-11-22T08:05:22.1985102Z golangci-lint found no issues
+2026-11-22T08:05:22.1985610Z Ran golangci-lint in 3138ms
+2026-11-22T08:05:22.1986417Z ##[endgroup]
+2026-11-22T08:05:22.2146948Z ##[group]Run go build -v ./...
+2026-11-22T08:05:22.2147326Z [36;1mgo build -v ./...[0m
+2026-11-22T08:05:22.2182860Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:22.2183354Z env:
+2026-11-22T08:05:22.2183738Z   GOTOOLCHAIN: local
+2026-11-22T08:05:22.2184111Z ##[endgroup]
+2026-11-22T08:05:22.3308984Z example.com/student-service
+2026-11-22T08:05:23.3129398Z ##[group]Run go test -v -race -coverprofile=coverage.out ./...
+2026-11-22T08:05:23.3129976Z [36;1mgo test -v -race -coverprofile=coverage.out ./...[0m
+2026-11-22T08:05:23.3163683Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:23.3163959Z env:
+2026-11-22T08:05:23.3164170Z   GOTOOLCHAIN: local
+2026-11-22T08:05:23.3164402Z ##[endgroup]
+2026-11-22T08:05:24.4773781Z 	example.com/student-service		coverage: 0.0% of statements
+2026-11-22T08:05:24.4926982Z 	example.com/student-service/gen/student/v1		coverage: 0.0% of statements
+2026-11-22T08:05:24.4937932Z 	example.com/student-service/grpctransport		coverage: 0.0% of statements
+2026-11-22T08:05:24.5003436Z 	example.com/student-service/httptransport		coverage: 0.0% of statements
+2026-11-22T08:05:24.5005383Z === RUN   TestCreateGetAndChangeGroup
+2026-11-22T08:05:24.5027561Z --- PASS: TestCreateGetAndChangeGroup (0.00s)
+2026-11-22T08:05:24.5028684Z === RUN   TestGetByIDNotFound
+2026-11-22T08:05:24.5029392Z --- PASS: TestGetByIDNotFound (0.00s)
+2026-11-22T08:05:24.5029983Z === RUN   TestCreateRejectsMissingNameOrGroup
+2026-11-22T08:05:24.5030999Z --- PASS: TestCreateRejectsMissingNameOrGroup (0.00s)
+2026-11-22T08:05:24.5031541Z PASS
+2026-11-22T08:05:24.5031933Z coverage: 70.7% of statements
+2026-11-22T08:05:24.5032684Z ok  	example.com/student-service/implementation	(cached)	coverage: 70.7% of statements
+2026-11-22T08:05:24.5033586Z === RUN   TestMemoryRepositoryCreateGetAndChangeGroup
+2026-11-22T08:05:24.5034334Z --- PASS: TestMemoryRepositoryCreateGetAndChangeGroup (0.00s)
+2026-11-22T08:05:24.5035020Z === RUN   TestMemoryRepositoryNotFound
+2026-11-22T08:05:24.5035607Z --- PASS: TestMemoryRepositoryNotFound (0.00s)
+2026-11-22T08:05:24.5036202Z === RUN   TestMemoryRepositoryConcurrentAccess
+2026-11-22T08:05:24.5037080Z --- PASS: TestMemoryRepositoryConcurrentAccess (0.00s)
+2026-11-22T08:05:24.5037807Z === RUN   TestMemoryRepositoryRespectsCanceledContext
+2026-11-22T08:05:24.5038539Z --- PASS: TestMemoryRepositoryRespectsCanceledContext (0.00s)
+2026-11-22T08:05:24.5039157Z PASS
+2026-11-22T08:05:24.5039514Z coverage: 88.0% of statements
+2026-11-22T08:05:24.5040216Z ok  	example.com/student-service/repository	(cached)	coverage: 88.0% of statements
+2026-11-22T08:05:24.5040747Z ?   	example.com/student-service/student	[no test files]
+2026-11-22T08:05:24.5875867Z 	example.com/student-service/transport		coverage: 0.0% of statements
+2026-11-22T08:05:24.6056153Z ##[group]Run go tool cover -func=coverage.out
+2026-11-22T08:05:24.6056591Z [36;1mgo tool cover -func=coverage.out[0m
+2026-11-22T08:05:24.6089016Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:24.6089293Z env:
+2026-11-22T08:05:24.6089499Z   GOTOOLCHAIN: local
+2026-11-22T08:05:24.6089743Z ##[endgroup]
+2026-11-22T08:05:24.7543377Z example.com/student-service/gen/student/v1/student.pb.go:19:		Reset						0.0%
+2026-11-22T08:05:24.7544638Z example.com/student-service/gen/student/v1/student.pb.go:20:		String						0.0%
+2026-11-22T08:05:24.7546021Z example.com/student-service/gen/student/v1/student.pb.go:21:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7547563Z example.com/student-service/gen/student/v1/student.pb.go:22:		GetId						0.0%
+2026-11-22T08:05:24.7548645Z example.com/student-service/gen/student/v1/student.pb.go:28:		GetFullName					0.0%
+2026-11-22T08:05:24.7549656Z example.com/student-service/gen/student/v1/student.pb.go:34:		GetGroup					0.0%
+2026-11-22T08:05:24.7550872Z example.com/student-service/gen/student/v1/student.pb.go:40:		GetGpa						0.0%
+2026-11-22T08:05:24.7551631Z example.com/student-service/gen/student/v1/student.pb.go:46:		GetEnrolledOn					0.0%
+2026-11-22T08:05:24.7552415Z example.com/student-service/gen/student/v1/student.pb.go:58:		Reset						0.0%
+2026-11-22T08:05:24.7553119Z example.com/student-service/gen/student/v1/student.pb.go:59:		String						0.0%
+2026-11-22T08:05:24.7553822Z example.com/student-service/gen/student/v1/student.pb.go:60:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7554532Z example.com/student-service/gen/student/v1/student.pb.go:61:		GetStudent					0.0%
+2026-11-22T08:05:24.7555208Z example.com/student-service/gen/student/v1/student.pb.go:73:		Reset						0.0%
+2026-11-22T08:05:24.7555866Z example.com/student-service/gen/student/v1/student.pb.go:74:		String						0.0%
+2026-11-22T08:05:24.7556540Z example.com/student-service/gen/student/v1/student.pb.go:75:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7558951Z example.com/student-service/gen/student/v1/student.pb.go:76:		GetId						0.0%
+2026-11-22T08:05:24.7559856Z example.com/student-service/gen/student/v1/student.pb.go:88:		Reset						0.0%
+2026-11-22T08:05:24.7560895Z example.com/student-service/gen/student/v1/student.pb.go:89:		String						0.0%
+2026-11-22T08:05:24.7562038Z example.com/student-service/gen/student/v1/student.pb.go:90:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7563170Z example.com/student-service/gen/student/v1/student.pb.go:91:		GetId						0.0%
+2026-11-22T08:05:24.7564099Z example.com/student-service/gen/student/v1/student.pb.go:103:		Reset						0.0%
+2026-11-22T08:05:24.7565066Z example.com/student-service/gen/student/v1/student.pb.go:104:		String						0.0%
+2026-11-22T08:05:24.7566191Z example.com/student-service/gen/student/v1/student.pb.go:105:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7567848Z example.com/student-service/gen/student/v1/student.pb.go:106:		GetStudent					0.0%
+2026-11-22T08:05:24.7568730Z example.com/student-service/gen/student/v1/student.pb.go:119:		Reset						0.0%
+2026-11-22T08:05:24.7569823Z example.com/student-service/gen/student/v1/student.pb.go:120:		String						0.0%
+2026-11-22T08:05:24.7570819Z example.com/student-service/gen/student/v1/student.pb.go:121:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7571849Z example.com/student-service/gen/student/v1/student.pb.go:122:		GetId						0.0%
+2026-11-22T08:05:24.7572435Z example.com/student-service/gen/student/v1/student.pb.go:128:		GetGroup					0.0%
+2026-11-22T08:05:24.7573019Z example.com/student-service/gen/student/v1/student.pb.go:140:		Reset						0.0%
+2026-11-22T08:05:24.7573555Z example.com/student-service/gen/student/v1/student.pb.go:141:		String						0.0%
+2026-11-22T08:05:24.7574113Z example.com/student-service/gen/student/v1/student.pb.go:142:		ProtoMessage					0.0%
+2026-11-22T08:05:24.7574705Z example.com/student-service/gen/student/v1/student.pb.go:143:		GetChanged					0.0%
+2026-11-22T08:05:24.7575333Z example.com/student-service/gen/student/v1/student_grpc.pb.go:27:	NewStudentServiceClient				0.0%
+2026-11-22T08:05:24.7577181Z example.com/student-service/gen/student/v1/student_grpc.pb.go:30:	Create						0.0%
+2026-11-22T08:05:24.7578307Z example.com/student-service/gen/student/v1/student_grpc.pb.go:38:	GetByID						0.0%
+2026-11-22T08:05:24.7579350Z example.com/student-service/gen/student/v1/student_grpc.pb.go:46:	ChangeGroup					0.0%
+2026-11-22T08:05:24.7580346Z example.com/student-service/gen/student/v1/student_grpc.pb.go:64:	Create						0.0%
+2026-11-22T08:05:24.7581394Z example.com/student-service/gen/student/v1/student_grpc.pb.go:67:	GetByID						0.0%
+2026-11-22T08:05:24.7582435Z example.com/student-service/gen/student/v1/student_grpc.pb.go:70:	ChangeGroup					0.0%
+2026-11-22T08:05:24.7583464Z example.com/student-service/gen/student/v1/student_grpc.pb.go:73:	mustEmbedUnimplementedStudentServiceServer	0.0%
+2026-11-22T08:05:24.7584309Z example.com/student-service/gen/student/v1/student_grpc.pb.go:79:	RegisterStudentServiceServer			0.0%
+2026-11-22T08:05:24.7585070Z example.com/student-service/gen/student/v1/student_grpc.pb.go:83:	_StudentService_Create_Handler			0.0%
+2026-11-22T08:05:24.7585809Z example.com/student-service/gen/student/v1/student_grpc.pb.go:97:	_StudentService_GetByID_Handler			0.0%
+2026-11-22T08:05:24.7587597Z example.com/student-service/gen/student/v1/student_grpc.pb.go:111:	_StudentService_ChangeGroup_Handler		0.0%
+2026-11-22T08:05:24.7588714Z example.com/student-service/grpctransport/transport.go:26:		NewService					0.0%
+2026-11-22T08:05:24.7589304Z example.com/student-service/grpctransport/transport.go:34:		Create						0.0%
+2026-11-22T08:05:24.7589866Z example.com/student-service/grpctransport/transport.go:42:		GetByID						0.0%
+2026-11-22T08:05:24.7590440Z example.com/student-service/grpctransport/transport.go:50:		ChangeGroup					0.0%
+2026-11-22T08:05:24.7591055Z example.com/student-service/grpctransport/transport.go:58:		decodeCreateRequest				0.0%
+2026-11-22T08:05:24.7591688Z example.com/student-service/grpctransport/transport.go:71:		encodeCreateResponse				0.0%
+2026-11-22T08:05:24.7592357Z example.com/student-service/grpctransport/transport.go:79:		decodeGetByIDRequest				0.0%
+2026-11-22T08:05:24.7592997Z example.com/student-service/grpctransport/transport.go:87:		encodeGetByIDResponse				0.0%
+2026-11-22T08:05:24.7593655Z example.com/student-service/grpctransport/transport.go:98:		decodeChangeGroupRequest			0.0%
+2026-11-22T08:05:24.7594330Z example.com/student-service/grpctransport/transport.go:106:		encodeChangeGroupResponse			0.0%
+2026-11-22T08:05:24.7594958Z example.com/student-service/grpctransport/transport.go:114:		toGRPCError					0.0%
+2026-11-22T08:05:24.7595533Z example.com/student-service/httptransport/transport.go:20:		NewService					0.0%
+2026-11-22T08:05:24.7596122Z example.com/student-service/httptransport/transport.go:39:		decodeCreateRequest				0.0%
+2026-11-22T08:05:24.7597227Z example.com/student-service/httptransport/transport.go:47:		decodeGetByIDRequest				0.0%
+2026-11-22T08:05:24.7597876Z example.com/student-service/httptransport/transport.go:51:		decodeChangeGroupRequest			0.0%
+2026-11-22T08:05:24.7598520Z example.com/student-service/httptransport/transport.go:61:		encodeResponse					0.0%
+2026-11-22T08:05:24.7599104Z example.com/student-service/httptransport/transport.go:66:		encodeError					0.0%
+2026-11-22T08:05:24.7599669Z example.com/student-service/implementation/service.go:25:		NewService					66.7%
+2026-11-22T08:05:24.7600217Z example.com/student-service/implementation/service.go:32:		Create						84.6%
+2026-11-22T08:05:24.7600751Z example.com/student-service/implementation/service.go:52:		GetByID						72.7%
+2026-11-22T08:05:24.7601363Z example.com/student-service/implementation/service.go:70:		ChangeGroup					58.3%
+2026-11-22T08:05:24.7601941Z example.com/student-service/implementation/service.go:91:		logEvent					50.0%
+2026-11-22T08:05:24.7602460Z example.com/student-service/listener.go:5:				newListener					0.0%
+2026-11-22T08:05:24.7602896Z example.com/student-service/main.go:26:					main						0.0%
+2026-11-22T08:05:24.7603479Z example.com/student-service/main.go:85:					logEvent					0.0%
+2026-11-22T08:05:24.7604035Z example.com/student-service/repository/memory.go:18:			NewMemoryRepository				100.0%
+2026-11-22T08:05:24.7604614Z example.com/student-service/repository/memory.go:22:			CreateStudent					100.0%
+2026-11-22T08:05:24.7605257Z example.com/student-service/repository/memory.go:32:			GetStudentByID					87.5%
+2026-11-22T08:05:24.7605823Z example.com/student-service/repository/memory.go:45:			ChangeStudentGroup				80.0%
+2026-11-22T08:05:24.7606387Z example.com/student-service/transport/endpoints.go:44:			MakeEndpoints					0.0%
+2026-11-22T08:05:24.7607185Z total:									(statements)					17.5%
+2026-11-22T08:05:24.7693668Z ##[group]Run actions/upload-artifact@v7
+2026-11-22T08:05:24.7693997Z with:
+2026-11-22T08:05:24.7694223Z   name: coverage-go-1.26.x
+2026-11-22T08:05:24.7694473Z   path: coverage.out
+2026-11-22T08:05:24.7694715Z   if-no-files-found: ignore
+2026-11-22T08:05:24.7694955Z   retention-days: 14
+2026-11-22T08:05:24.7695182Z   compression-level: 6
+2026-11-22T08:05:24.7695408Z   overwrite: false
+2026-11-22T08:05:24.7695628Z   include-hidden-files: false
+2026-11-22T08:05:24.7695891Z   archive: true
+2026-11-22T08:05:24.7696094Z env:
+2026-11-22T08:05:24.7696409Z   GOTOOLCHAIN: local
+2026-11-22T08:05:24.7697034Z ##[endgroup]
+2026-11-22T08:05:24.9178295Z With the provided path, there will be 1 file uploaded
+2026-11-22T08:05:24.9200386Z Artifact name is valid!
+2026-11-22T08:05:24.9203441Z Root directory input is valid!
+2026-11-22T08:05:25.1119650Z Uploading artifact: coverage-go-1.26.x.zip
+2026-11-22T08:05:25.1161596Z Beginning upload of artifact content to blob storage
+2026-11-22T08:05:25.2075553Z Uploaded bytes 1915
+2026-11-22T08:05:25.2227961Z Finished uploading artifact content to blob storage!
+2026-11-22T08:05:25.2229068Z SHA256 digest of uploaded artifact is d32a7321b6aa8fa8aafd2685fbed16c08dfc7eb2044bd61fa2e0277dd7159e00
+2026-11-22T08:05:25.2230259Z Finalizing artifact upload
+2026-11-22T08:05:25.5846071Z Artifact coverage-go-1.26.x successfully finalized. Artifact ID 14746115565
+2026-11-22T08:05:25.5848258Z Artifact coverage-go-1.26.x has been successfully uploaded! Final size is 1915 bytes. Artifact ID is 14746115565
+2026-11-22T08:05:25.5850788Z Artifact download URL: https://github.com/Vitocik/student-service/actions/runs/45001140831/artifacts/14746115565
+2026-11-22T08:05:25.6053478Z Post job cleanup.
+2026-11-22T08:05:25.7665449Z Cache hit occurred on the primary key golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630, not saving cache.
+2026-11-22T08:05:25.7843122Z Post job cleanup.
+2026-11-22T08:05:25.9070043Z [command]/opt/hostedtoolcache/go/1.26.11/x64/bin/go env GOMODCACHE
+2026-11-22T08:05:25.9148612Z [command]/opt/hostedtoolcache/go/1.26.11/x64/bin/go env GOCACHE
+2026-11-22T08:05:25.9198729Z /home/runner/go/pkg/mod
+2026-11-22T08:05:25.9217628Z /home/runner/.cache/go-build
+2026-11-22T08:05:25.9225265Z Cache hit occurred on the primary key setup-go-Linux-x64-ubuntu26-go-1.26.11-97c6e1934331f9e5f0d73ed1da964286129e545019dffe1a22fdbce95cf63484, not saving cache.
+2026-11-22T08:05:25.9434150Z Post job cleanup.
+2026-11-22T08:05:26.0380893Z [command]/usr/bin/git version
+2026-11-22T08:05:26.0434791Z git version 2.56.1
+2026-11-22T08:05:26.0477663Z Temporarily overriding HOME='/home/runner/work/_temp/0e0c7ac8-f471-49fe-aa28-89e5a5ad417b' before making global git config changes
+2026-11-22T08:05:26.0479105Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-22T08:05:26.0487893Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/student-service/student-service
+2026-11-22T08:05:26.0521977Z Removing SSH command configuration
+2026-11-22T08:05:26.0529292Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-22T08:05:26.0572454Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-22T08:05:26.0891992Z Removing HTTP extra header
+2026-11-22T08:05:26.0898059Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-22T08:05:26.0943187Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-22T08:05:26.1252767Z Removing includeIf entries pointing to credentials config files
+2026-11-22T08:05:26.1259148Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-22T08:05:26.1289767Z includeif.gitdir:/home/runner/work/student-service/student-service/.git.path
+2026-11-22T08:05:26.1291021Z includeif.gitdir:/home/runner/work/student-service/student-service/.git/worktrees/*.path
+2026-11-22T08:05:26.1292206Z includeif.gitdir:/github/workspace/.git.path
+2026-11-22T08:05:26.1293122Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-22T08:05:26.1300211Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/student-service/student-service/.git.path
+2026-11-22T08:05:26.1325113Z /home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:26.1335589Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/student-service/student-service/.git.path \/home\/runner\/work\/_temp\/git\-credentials\-27a8ebb4\-b8c7\-4bfa\-8ce2\-b17b05d8b450\.config
+2026-11-22T08:05:26.1375964Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/student-service/student-service/.git/worktrees/*.path
+2026-11-22T08:05:26.1408545Z /home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:26.1418323Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/student-service/student-service/.git/worktrees/*.path \/home\/runner\/work\/_temp\/git\-credentials\-27a8ebb4\-b8c7\-4bfa\-8ce2\-b17b05d8b450\.config
+2026-11-22T08:05:26.1453655Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-11-22T08:05:26.1479500Z /github/runner_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:26.1487459Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path \/github\/runner_temp\/git\-credentials\-27a8ebb4\-b8c7\-4bfa\-8ce2\-b17b05d8b450\.config
+2026-11-22T08:05:26.1520939Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-11-22T08:05:26.1545496Z /github/runner_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config
+2026-11-22T08:05:26.1552233Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path \/github\/runner_temp\/git\-credentials\-27a8ebb4\-b8c7\-4bfa\-8ce2\-b17b05d8b450\.config
+2026-11-22T08:05:26.1586496Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-22T08:05:26.1863492Z Removing credentials config '/home/runner/work/_temp/git-credentials-27a8ebb4-b8c7-4bfa-8ce2-b17b05d8b450.config'
+2026-11-22T08:05:26.2020158Z Cleaning up orphan processes

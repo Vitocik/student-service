@@ -1,0 +1,2 @@
+﻿2026-11-22T08:05:25.6053466Z Post job cleanup.
+2026-11-22T08:05:25.7665416Z Cache hit occurred on the primary key golangci-lint.cache-Linux-2968-60c4497a794bd6a086d3c57a980a99d36cac4630, not saving cache.

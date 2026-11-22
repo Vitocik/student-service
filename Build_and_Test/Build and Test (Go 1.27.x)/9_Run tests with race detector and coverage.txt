@@ -1,0 +1,32 @@
+﻿2026-11-22T08:05:28.4918250Z ##[group]Run go test -v -race -coverprofile=coverage.out ./...
+2026-11-22T08:05:28.4918908Z [36;1mgo test -v -race -coverprofile=coverage.out ./...[0m
+2026-11-22T08:05:28.4962210Z shell: /usr/bin/bash -e {0}
+2026-11-22T08:05:28.4962571Z env:
+2026-11-22T08:05:28.4962840Z   GOTOOLCHAIN: local
+2026-11-22T08:05:28.4963139Z ##[endgroup]
+2026-11-22T08:05:30.2281637Z 	example.com/student-service		coverage: 0.0% of statements
+2026-11-22T08:05:30.2348909Z 	example.com/student-service/gen/student/v1		coverage: 0.0% of statements
+2026-11-22T08:05:30.2349481Z 	example.com/student-service/grpctransport		coverage: 0.0% of statements
+2026-11-22T08:05:30.2349918Z 	example.com/student-service/httptransport		coverage: 0.0% of statements
+2026-11-22T08:05:30.2350333Z === RUN   TestCreateGetAndChangeGroup
+2026-11-22T08:05:30.2350618Z --- PASS: TestCreateGetAndChangeGroup (0.00s)
+2026-11-22T08:05:30.2351001Z === RUN   TestGetByIDNotFound
+2026-11-22T08:05:30.2351524Z --- PASS: TestGetByIDNotFound (0.00s)
+2026-11-22T08:05:30.2352047Z === RUN   TestCreateRejectsMissingNameOrGroup
+2026-11-22T08:05:30.2352822Z --- PASS: TestCreateRejectsMissingNameOrGroup (0.00s)
+2026-11-22T08:05:30.2353226Z PASS
+2026-11-22T08:05:30.2353494Z coverage: 70.7% of statements
+2026-11-22T08:05:30.2354035Z ok  	example.com/student-service/implementation	(cached)	coverage: 70.7% of statements
+2026-11-22T08:05:30.2354672Z === RUN   TestMemoryRepositoryCreateGetAndChangeGroup
+2026-11-22T08:05:30.2355213Z --- PASS: TestMemoryRepositoryCreateGetAndChangeGroup (0.00s)
+2026-11-22T08:05:30.2355696Z === RUN   TestMemoryRepositoryNotFound
+2026-11-22T08:05:30.2356105Z --- PASS: TestMemoryRepositoryNotFound (0.00s)
+2026-11-22T08:05:30.2356543Z === RUN   TestMemoryRepositoryConcurrentAccess
+2026-11-22T08:05:30.2357001Z --- PASS: TestMemoryRepositoryConcurrentAccess (0.01s)
+2026-11-22T08:05:30.2357522Z === RUN   TestMemoryRepositoryRespectsCanceledContext
+2026-11-22T08:05:30.2358035Z --- PASS: TestMemoryRepositoryRespectsCanceledContext (0.00s)
+2026-11-22T08:05:30.2358464Z PASS
+2026-11-22T08:05:30.2358740Z coverage: 88.0% of statements
+2026-11-22T08:05:30.2359234Z ok  	example.com/student-service/repository	(cached)	coverage: 88.0% of statements
+2026-11-22T08:05:30.2359828Z ?   	example.com/student-service/student	[no test files]
+2026-11-22T08:05:30.3128131Z 	example.com/student-service/transport		coverage: 0.0% of statements
