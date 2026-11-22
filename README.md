@@ -150,3 +150,4 @@ go run .
 [![CI](https://github.com/YOUR_GITHUB_USERNAME/student-service/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/student-service/actions/workflows/ci.yml)
 [![Docker](https://github.com/YOUR_GITHUB_USERNAME/student-service/actions/workflows/docker.yml/badge.svg)](https://github.com/YOUR_GITHUB_USERNAME/student-service/actions/workflows/docker.yml)
 ```
+<!-- test branch protection -->
