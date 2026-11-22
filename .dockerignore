@@ -1,0 +1,9 @@
+.git
+.github
+.vscode
+.DS_Store
+coverage.out
+*.test
+*.exe
+dist/
+task1-order-service/

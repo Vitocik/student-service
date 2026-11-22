@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package student.v1;
+
+option go_package = "example.com/student-service/gen/student/v1;studentv1";
+
+message Student {
+  string id = 1;
+  string full_name = 2;
+  string group = 3;
+  float gpa = 4;
+  int64 enrolled_on = 5;
+}
+
+message CreateStudentRequest {
+  Student student = 1;
+}
+
+message CreateStudentResponse {
+  string id = 1;
+}
+
+message GetByIDRequest {
+  string id = 1;
+}
+
+message GetByIDResponse {
+  Student student = 1;
+}
+
+message ChangeGroupRequest {
+  string id = 1;
+  string group = 2;
+}
+
+message ChangeGroupResponse {
+  bool changed = 1;
+}
+
+service StudentService {
+  rpc Create(CreateStudentRequest) returns (CreateStudentResponse);
+  rpc GetByID(GetByIDRequest) returns (GetByIDResponse);
+  rpc ChangeGroup(ChangeGroupRequest) returns (ChangeGroupResponse);
+}
