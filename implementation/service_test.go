@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/go-kit/kit/log"
+	"github.com/go-kit/log"
 
 	"example.com/student-service/repository"
 	"example.com/student-service/student"

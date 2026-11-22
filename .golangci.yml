@@ -1,0 +1,10 @@
+version: "2"
+
+linters:
+  exclusions:
+    rules:
+      # Файл использует совместимый старый protobuf API. Проверяем его компиляцию
+      # и остальные линтеры, но не выдаём предупреждение SA1019 для legacy API.
+      - path: ^gen/student/v1/student\.pb\.go$
+        linters:
+          - staticcheck

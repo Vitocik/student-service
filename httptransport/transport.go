@@ -8,8 +8,9 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/go-kit/kit/log"
+	kittransport "github.com/go-kit/kit/transport"
 	kithttp "github.com/go-kit/kit/transport/http"
+	"github.com/go-kit/log"
 	"github.com/gorilla/mux"
 
 	"example.com/student-service/student"
@@ -19,7 +20,7 @@ import (
 func NewService(endpoints transport.Endpoints, logger log.Logger) http.Handler {
 	r := mux.NewRouter()
 	options := []kithttp.ServerOption{
-		kithttp.ServerErrorLogger(logger),
+		kithttp.ServerErrorHandler(kittransport.NewLogErrorHandler(logger)),
 		kithttp.ServerErrorEncoder(encodeError),
 	}
 
